@@ -10,7 +10,6 @@ const GlobalStyle = createGlobalStyle`
 
     html, body{
         height: 100vh;
-        width: 100vw;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         text-rendering: optimizeLegibility;
     }

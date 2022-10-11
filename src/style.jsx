@@ -11,27 +11,43 @@ const sizes = {
 export const Container = styled.div`
 
     display: grid;
-    grid-template-columns: 20vw 80vw;
-    grid-template-rows: 20vh 70vh 10vh;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 20vh 80vh 10vh;
 
 
-    @media (min-width: ${sizes.desktop}){
+    @media screen and (min-device-width:${sizes.laptop}), screen and (max-width:${sizes.desktop}) {
+
         grid-template-areas: "h h"
                             "a m"
                             "f f";
+    
     }
 
     @media (max-width: ${sizes.laptop}) {
-        grid-template-rows: 20vh 10vh 60vh 10vh;
+
+        grid-template-rows: 20vh 10vh 70vh 10vh;
         grid-template-areas: "h h"
                             "a a"
                             "m m"
                             "f f";
     }
+
+    @media (max-width: ${sizes.mobile}) {
+
+        grid-template-columns: 100%;
+        grid-template-rows: 20vh 10vh 70vh 10vh;
+        grid-template-areas: "h"
+                            "a"
+                            "m"
+                            "f";
+    }
 `;
 
 export const Header = styled.header`
 
+    position: fixed;
+    height: 20vh;
+    width: 100vw;
     background-color: red;
     grid-area: h;
 
