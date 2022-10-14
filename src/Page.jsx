@@ -1,5 +1,6 @@
 
-import { Container, Header, Aside, Footer, Main } from "./style"
+import { Card } from "./card"
+import { Container, Header, Aside, Main } from "./style"
 
 export function Page(){
     return(
@@ -11,11 +12,15 @@ export function Page(){
                 leteral
             </Aside>
             <Main>
-                principal
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
             </Main>
-            <Footer>
-                footer
-            </Footer>
         </Container>
     )
 }

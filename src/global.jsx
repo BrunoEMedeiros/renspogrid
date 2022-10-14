@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     html, body{
+        overflow: hidden;
         height: 100vh;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         text-rendering: optimizeLegibility;

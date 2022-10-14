@@ -1,4 +1,4 @@
-
+import { FcBiohazard } from 'react-icons/fc'
 import styled from "styled-components";
 
 const sizes = {
@@ -11,43 +11,37 @@ const sizes = {
 export const Container = styled.div`
 
     display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 20vh 80vh 10vh;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 5vh 95vh;
 
 
     @media screen and (min-device-width:${sizes.laptop}), screen and (max-width:${sizes.desktop}) {
 
         grid-template-areas: "h h"
                             "a m"
-                            "f f";
     
     }
 
     @media (max-width: ${sizes.laptop}) {
 
-        grid-template-rows: 20vh 10vh 70vh 10vh;
+        grid-template-rows: 10vh 10vh 80vh;
         grid-template-areas: "h h"
                             "a a"
                             "m m"
-                            "f f";
     }
 
     @media (max-width: ${sizes.mobile}) {
 
         grid-template-columns: 100%;
-        grid-template-rows: 20vh 10vh 70vh 10vh;
+        grid-template-rows: 10vh 10vh 80vh;
         grid-template-areas: "h"
                             "a"
                             "m"
-                            "f";
     }
 `;
 
 export const Header = styled.header`
 
-    position: fixed;
-    height: 20vh;
-    width: 100vw;
     background-color: red;
     grid-area: h;
 
@@ -55,15 +49,27 @@ export const Header = styled.header`
 
 export const Aside = styled.aside`
 
-    background-color: brown;
+    background-color: green;
     grid-area: a;
 
 `;
 
 export const Main = styled.main`
 
-    background-color: yellow;
+    scrollbar-width: none;
+    overflow-y: scroll;
+
+    background-image: url(${FcBiohazard});
     grid-area: m;
+
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    
 
 `;
 
